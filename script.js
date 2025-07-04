@@ -11,6 +11,7 @@ function mostraPalavrasChave() {
 
   campoResultado.textContent = palavrasChave.join(", ");
 }
+
 function processaTexto(texto) {
   let palavras = texto.split(/\P{L}+/u);
 
@@ -22,10 +23,9 @@ function processaTexto(texto) {
     return frequencias[p2] - frequencias[p1];
   }
 
-  console.log(ordenadas);
-
-  return palavras;
+  return ordenadas.slice(0, 10);
 }
+
 function contaFrequencias(palavras) {
   let frequencias = {};
 
